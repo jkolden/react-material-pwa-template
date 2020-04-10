@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mobiscroll-deployment
+spec:
+  selector:
+    matchLabels:
+      app: mobiscroll
+  replicas: 1 # deployment runs 1 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: mobiscroll
+    spec:
+      containers:
+        - name: mobiscroll
+          image: jkolden/mobiscroll:latest
+          ports:
+            - containerPort: 80 #Endpoint is at port 80 in the container
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mobiscroll-k8s-service
+spec:
+  type: NodePort #Exposes the service as a node port
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: mobiscroll
