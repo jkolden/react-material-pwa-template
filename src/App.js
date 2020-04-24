@@ -7,7 +7,6 @@ import {
   Route,
 } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import mobiscroll from "@mobiscroll/react-lite";
 import "./App.css";
 
 import { Grid, CssBaseline, ThemeProvider } from "@material-ui/core";
