@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 /* import mobiscroll */
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
-import "@mobiscroll/react-lite/dist/css/mobiscroll.min.css";
 
 /* Icons */
 

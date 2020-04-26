@@ -10,7 +10,6 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Copyright from "../components/Copyright";
-import DefaultDate from "../utilities/DefaultDate";
 
 import { UserContext } from "../context/UserContext";
 
@@ -61,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Home() {
-  const [selectedDays, setSelectedDays] = useState(DefaultDate);
   const { user } = useContext(UserContext);
 
   const classes = useStyles();
